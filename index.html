@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scorecard</title>
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>BasketBall Score Card</h1>
+    <div class="timer-section">
+        <h2>Timer: <span id="clock">00:00</span></h2>
+        <div class="timer-buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="holdTimer()">Hold</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <div class="score-section">
+        <div class="team-score">
+            <h3>HOME</h3>
+            <h4 id="home-el">0</h4>
+            <div class="buttons">
+                <button onclick="addOneToHome()">+1</button>
+                <button onclick="addTwoToHome()">+2</button>
+                <button onclick="addThreeToHome()">+3</button>
+            </div>
+        </div>
+        <div class="team-score">
+            <h3>GUEST</h3>
+            <h4 id="guest-el">0</h4>
+            <div class="buttons">
+                <button onclick="addOneToGuest()">+1</button>
+                <button onclick="addTwoToGuest()">+2</button>
+                <button onclick="addThreeToGuest()">+3</button>
+            </div>
+        </div>
+    </div>
+    <button onclick="newGame()" id="new-game">New Game</button>
+    <script src="index.js"></script>
+</body>
+</html>
