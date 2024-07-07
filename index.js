@@ -60,6 +60,7 @@ function newGame() {
     initialStyle();
     showGuestScore();
     showHomeScore();
+    reset();
 }
 
 // Function to reset background styles for score displays
