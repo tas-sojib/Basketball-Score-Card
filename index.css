@@ -7,13 +7,16 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #1B244A;
+   text-align: center;
+    height: 90vh;
+    color: #EEEEEE;
+}
+
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    color: #EEEEEE;
-    padding-top: 50px;
 }
 
 #clock {
@@ -35,8 +38,8 @@ body {
     border: 2px solid #F94F6D;
     border-radius: 10px;
     background-color: #2C3457;
-    width: 90%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 700px;
 }
 
 .timer-section h2 {
@@ -48,6 +51,7 @@ body {
     display: flex;
     gap: 15px;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .timer-buttons button {
@@ -79,7 +83,7 @@ body {
 }
 
 .team-score h4 {
-    padding-top: 18px;
+    padding-top: 16px;
     color: #F94F6D;
     font-family: 'Cursed Timer ULiL', sans-serif;
     font-size: 90px;
@@ -117,16 +121,16 @@ body {
     display: flex;
     gap: 50px;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 0 30px;
     border: 2px solid #28A745;
     border-radius: 10px;
     background-color: #2C3457;
-    width: 90%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 700px;
 }
 
 #new-game {
-    margin-top: 20px;
+    margin: 25px 0;
     padding: 10px 20px;
     font-size: 18px;
     background-color: #28A745;
