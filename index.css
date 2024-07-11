@@ -152,3 +152,6 @@ button:disabled{
         cursor: not-allowed;
         opacity: 0.6;
 }
+button:disabled:hover {
+    background-color: #cccccc; /* Ensure it stays gray */
+}
