@@ -84,11 +84,10 @@ function highlightLeader() {
 
 // Function to start the game timer
 function startTimer() {
-    const startTime = new Date().getTime() - elapsedTime;  // Adjust for elapsed time
-
-    if (interval) {
-        holdTimer();  // Stop the timer if it's already running
-    }
+    document.getElementById('hold').disabled = false;
+    document.getElementById('reset').disabled = false;
+    document.getElementById('start').disabled = true;
+    const startTime = new Date().getTime() - elapsedTime; // Adjust for elapsed time
 
     // Start interval to update timer display every second
     interval = setInterval(function() {
@@ -102,21 +101,26 @@ function startTimer() {
 
         // Stop timer if 10 minutes (600 seconds) have passed
         if (minutes === 10) {
-            holdTimer();
+            clearInterval(interval); // Stop the timer
+            document.getElementById('start').disabled = true;
+            document.getElementById('hold').disabled = true;
         }
-    }, 1000);  // Update timer every second
+    }, 1000); // Update timer every second
 }
 
 // Function to hold the game timer
 function holdTimer() {
     clearInterval(interval); // Stop the timer
+    document.getElementById('start').disabled = false;
+    document.getElementById('hold').disabled = true;
 }
 
 // Function to reset the game timer and display
 function reset() {
     holdTimer();
+    document.getElementById('reset').disabled = true;
     elapsedTime = 0; // Reset elapsed time
-
     document.getElementById('clock').textContent = '00:00';
 }
+
 

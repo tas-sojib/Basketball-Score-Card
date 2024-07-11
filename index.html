@@ -13,9 +13,9 @@
         <div class="timer-section">
             <h2>Timer: <span id="clock">00:00</span></h2>
             <div class="timer-buttons">
-                <button onclick="startTimer()">Start</button>
-                <button onclick="holdTimer()">Hold</button>
-                <button onclick="reset()">Reset</button>
+                <button id="start" onclick="startTimer()">Start</button>
+                <button id="hold" disabled onclick="holdTimer()">Hold</button>
+                <button id="reset" disabled onclick="reset()">Reset</button>
             </div>
         </div>
     
